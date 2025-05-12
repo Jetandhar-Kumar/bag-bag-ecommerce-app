@@ -1,0 +1,55 @@
+/* footer.css */
+
+#mainFooter {
+  background-color: #dcd8d8;
+  color:#121212 ;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+
+#mainFooter.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#mainFooter h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#mainFooter a {
+  text-decoration: none;
+  color:#121212;
+}
+
+#mainFooter a:hover {
+  text-decoration: underline;
+}
+
+hr.bg-light {
+  opacity: 0.2;
+}
+
+body.dark-mode #mainFooter {
+  background-color:#3b3939;
+  color: #ffffff ; 
+}
+
+body.dark-mode #mainFooter a {
+  color: #ffffff ; 
+}
+
+body.dark-mode #mainFooter a:hover {
+  color: #ffc107 ; 
+}
+
+body.dark-mode hr.bg-light {
+  background-color: #ffffff  ;
+  opacity: 0.2 ;
+}
+
+
+

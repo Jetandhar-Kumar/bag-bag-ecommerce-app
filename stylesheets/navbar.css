@@ -1,0 +1,219 @@
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+#topNavbar {
+  font-size: 14px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.4s ease;
+}
+
+#topNavbar .welcome-text {
+  color: #6c757d;
+}
+
+body.dark-mode #topNavbar {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+/* Theme Toggle Button */
+.theme-checkbox {
+  --toggle-size: 8px;
+  appearance: none;
+  width: 6.25em;
+  height: 3.125em;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  border-radius: 99em;
+  cursor: pointer;
+  font-size: var(--toggle-size);
+  position: relative;
+  transition: 0.4s;
+}
+
+.theme-checkbox::before {
+  content: "";
+  width: 2.25em;
+  height: 2.25em;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.438em;
+  left: 0.438em;
+  transition: 0.4s;
+}
+
+.theme-checkbox:checked {
+  background-position: 100%;
+}
+
+.theme-checkbox:checked::before {
+  left: calc(100% - 2.25em - 0.438em);
+  background-position: 0;
+}
+
+
+#mainNavbar {
+  background-color: #f8f9fa;
+  transition: background-color 0.4s ease, box-shadow 0.3s;
+  
+}
+
+#mainNavbar.sticky {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.navbar-brand {
+  color: #ff6b6b !important;
+  font-weight: bold;
+}
+
+/* Centered Menu Links */
+.navbar-nav {
+  gap: 3px;
+}
+
+.navbar-nav .nav-link {
+  color: #333;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff6b6b;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #ff6b6b !important;
+}
+
+.navbar-toggler-icon{
+  color: #ffffff;
+}
+
+
+/* Dark Mode Settings */
+body.dark-mode {
+  background-color: #121212;
+  color: #eeeeee;
+}
+
+body.dark-mode #mainNavbar {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode .navbar-nav .nav-link {
+  color: #dddddd;
+}
+
+body.dark-mode .nav-link.active {
+  color: #ffc107 !important;
+}
+
+body.dark-mode .button-container > .button{
+  color: white;
+}
+
+
+
+/* Buttons in Dark Mode */
+body.dark-mode .btn-primary {
+  background-color: #ffc107;
+  color: #121212;
+}
+
+/* Forms in Dark Mode */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #333333;
+  color: #eeeeee;
+  border: 1px solid #555555;
+}
+
+/* ====== Button Container ====== */
+.button-container {
+  display: flex;
+  flex-direction: row;              
+  background-color: transparent;
+  width: 250px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+ 
+}
+
+/* icons styling (unchanged) */
+.button {
+  outline: 0;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+.button:hover { transform: translateY(-3px); }
+.icon { font-size: 20px; }
+
+.loginbtn{
+  color:black;
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 10px 15px;
+  font-size: 0.8rem;
+}
+.dropdown-menu .dropdown-item i {
+  font-size: 1rem;
+  color: #0d6efd;
+}
+
+
+/* ===== Responsive breakpoint ===== */
+@media (max-width: 768px) {
+  /* switch to vertical stack */
+  .button-container {
+    flex-direction:column;       
+    width: auto;                  
+    height: auto;                 
+    padding: 5px;                   
+  }
+
+  /* ensure individual buttons remain centered */
+  .button-container .button {
+    margin: 1px 0;      
+  }
+
+
+}
+@media (max-width: 576px) {
+  .welcome-text{
+    font-size: 12px;
+  }
+  .theme-checkbox{
+    font-size: 7px;
+  }
+.navbar-brand{
+  font-size: 12px;
+}
+.navbar-toggler{
+  height: 30px;
+}
+}
